@@ -1,0 +1,38 @@
+.trend {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  &_aside {
+    padding: 120px 0;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+
+    color: #000000;
+    background: rgba(0, 48, 73, 0.67);
+    box-shadow: 1287px 0 0 rgba(0, 48, 73, 0.67),
+      -180px 0 0 rgba(0, 48, 73, 0.67), 200px 0 0 rgba(0, 48, 73, 0.67);
+
+    &_main {
+      font-family: "Milonga";
+      margin-bottom: 60px;
+      letter-spacing: -0.07em;
+    }
+    &_dscb {
+      font-family: "Milonga";
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 64px;
+    }
+    &_check {
+      font-family: "Milonga";
+      text-decoration-line: underline;
+      letter-spacing: -0.07em;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
+  &_img {
+    transform: scale(0.8);
+  }
+}

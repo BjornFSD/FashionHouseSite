@@ -1,0 +1,20 @@
+.header {
+  &_bar {
+    display: flex;
+    height: 50px;
+    background-color: #000;
+    color: white;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    // align-content: stretch;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 15vw 0 0 #000, -15vw 0 0 #000;
+  }
+  &_logo {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-top: 15px;
+  }
+}

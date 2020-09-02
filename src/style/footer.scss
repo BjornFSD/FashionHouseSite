@@ -1,0 +1,62 @@
+.footer {
+  background-color: black;
+  color: white;
+  box-shadow: 15vw 0 0 #000, -15vw 0 0 #000;
+  font-family: "Montserrat";
+  margin-top: 15px;
+  &_box {
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+    padding-top: 4vh;
+    &-kontakt {
+      margin-left: 10vw;
+    }
+    &-newsletter {
+      width: 260px;
+      margin-right: 10vw;
+      &--form {
+        margin-top: 5vh;
+        &-email {
+          width: 100%;
+          height: 6vh;
+          margin-bottom: 3vh;
+          background: #000000;
+          border: 2px solid #ffffff;
+          font-size: 16px;
+          color: white;
+          padding-left: 20px;
+        }
+        &-btn {
+          width: 80%;
+          height: 8vh;
+          background: #1c1b1b;
+          border: 0px;
+          color: #ede3e3;
+          text-shadow: 0px 4px 4px rgba(237, 227, 227, 0.5);
+          font-size: 18px;
+        }
+        &-btn:hover {
+          border: 2px solid #ede3e3;
+        }
+      }
+    }
+  }
+  &_line {
+    padding-top: 15px;
+    border-bottom: 2px solid #ffffff;
+    filter: blur(4px);
+  }
+  &_cr {
+    margin-top: 2vh;
+    text-align: center;
+  }
+}
+.underline {
+  border-bottom: 2px solid #ffffff;
+  filter: blur(4px);
+  padding-bottom: 2vh;
+  margin-bottom: 2vh;
+}
+span {
+}

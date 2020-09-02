@@ -1,0 +1,23 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  //filter: blur(4px);
+
+  &_btn {
+    background-color: #ffffff;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 18px 24px;
+    border: 0px solid #000000;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+  &_btn:hover {
+    position: relative;
+    top: -5px;
+  }
+}
