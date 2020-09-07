@@ -1,8 +1,11 @@
 import React from "react";
 import Slider from "./Slider.js";
 import Nav from "./Nav.js";
+import logo from "../img/Logo.png";
 
-function Header() {
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+function Header({ Home }) {
   return (
     <div className="header">
       <div className="header_bar">
@@ -17,9 +20,10 @@ function Header() {
         </div>
       </div>
       <div className="header_logo">
-        <img src="img/Logo.png" alt="" />
+        <img src={logo} alt="" />
       </div>
       <Nav />
+
       <Slider />
     </div>
   );

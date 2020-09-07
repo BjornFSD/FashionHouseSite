@@ -1,26 +1,20 @@
 import React from "react";
+import data from "../data.json";
+import Trend from "./Trend.js";
+
+const dataItems = data.map((data) => {
+  return (
+    <a href={data.link} className="box_router">
+      <img src={`img/${data.sectionPL}T.png`} alt={data.sectionPL} />
+    </a>
+  );
+});
 
 function Main() {
   return (
-    <div className="box">
-      <a href="#" className="box_router">
-        <img src="img/koszulkiT.png" alt="" />
-      </a>
-      <a href="#" className="box_router">
-        <img src="img/koszuleT.png" alt="" />
-      </a>
-      <a href="#" className="box_router">
-        <img src="img/SwetryT.png" alt="" />
-      </a>
-      <a href="#" className="box_router">
-        <img src="img/MarynarkiT.png" alt="" />
-      </a>
-      <a href="#" className="box_router">
-        <img src="img/KurtkiT.png" alt="" />
-      </a>
-      <a href="#" className="box_router">
-        <img src="img/SpodnieT.png" alt="" />
-      </a>
+    <div>
+      <Trend />
+      <div className="box">{dataItems}</div>
     </div>
   );
 }

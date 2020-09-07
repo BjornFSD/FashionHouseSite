@@ -1,0 +1,167 @@
+[
+  {
+    "sectionPL": "Home",
+    "section": "",
+    "link": "/"
+  },
+  {
+    "sectionPL": "Koszulki",
+    "section": "tshirt",
+    "link": "/product/tshirt",
+    "products": [
+      {
+        "description": "Czarny t-shirt punisher",
+        "img": "/img/koszulki/punisher.png",
+        "price": 69,
+        "selected": false
+      },
+      {
+        "description": "Szary t-shirt",
+        "img": "/img/koszulki/grey.jpg",
+        "price": 59,
+        "selected": false
+      },
+      {
+        "description": "Led Zeppelin t-shirt",
+        "img": "/img/koszulki/ledzep.jpg",
+        "price": 59,
+        "selected": false
+      },
+      {
+        "description": "Biały t-shirt adidas",
+        "img": "/img/koszulki/adidas.jpg",
+        "price": 59,
+        "selected": false
+      },
+      {
+        "description": "Moro t-shirt",
+        "img": "/img/koszulki/moro.jpg",
+        "price": 59,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "sectionPL": "Koszule",
+    "section": "shirt",
+    "link": "/product/shirt",
+    "products": [
+      {
+        "description": "Koszula Army",
+        "img": "/img/koszule/Army.jpg",
+        "price": 79,
+        "selected": false
+      },
+      {
+        "description": "Koszula Dark Blue",
+        "img": "/img/koszule/DarkBlue.jpg",
+        "price": 79,
+        "selected": false
+      },
+      {
+        "description": "Koszula Jeans",
+        "img": "/img/koszule/Jeans.jpg",
+        "price": 79,
+        "selected": false
+      },
+      {
+        "description": "Koszula Light Blue",
+        "img": "/img/koszule/LightBlue.jpg",
+        "price": 79,
+        "selected": false
+      }
+    ]
+  },
+
+  {
+    "sectionPL": "Swetry",
+    "section": "sweater",
+    "link": "/product/sweater",
+    "products": [
+      {
+        "description": "Szary sweter",
+        "img": "/img/swetry/sweter.jpg",
+        "price": 39,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "sectionPL": "Marynarki",
+    "section": "suit",
+    "link": "/product/suit",
+    "products": [
+      {
+        "description": "Marynarka szara",
+        "img": "/img/marynarki/marynarka.jpg",
+        "price": 79,
+        "selected": false
+      }
+    ]
+  },
+
+  {
+    "sectionPL": "Kurtki",
+    "section": "jackets",
+    "link": "/product/jackets",
+    "products": [
+      {
+        "description": "Skórzana kurtka zapinana",
+        "img": "/img/kurtki/skorzana.jpg",
+        "price": 79,
+        "selected": false
+      },
+      {
+        "description": "Zielona kurtka jesienna",
+        "img": "/img/kurtki/zielona.jpg",
+        "price": 79,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "sectionPL": "Spodnie",
+    "section": "pants",
+    "link": "/product/pants",
+    "products": [
+      {
+        "description": "Dresy szare 4F",
+        "img": "/img/spodnie/4f.jpg",
+        "price": 79,
+        "selected": false
+      },
+      {
+        "description": "Spodnie białe",
+        "img": "/img/spodnie/biale.jpg",
+        "price": 79,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "sectionPL": "Bielizna",
+    "section": "underwear",
+    "link": "/product/underwear",
+    "products": [
+      {
+        "description": "Empty",
+        "img": "/img/spodnie/4f.jpg",
+        "price": 79,
+        "selected": false
+      }
+    ]
+  },
+  {
+    "sectionPL": "Akcesoria",
+    "section": "accessories",
+    "link": "/product/accessories",
+    "products": [
+      {
+        "description": "Empty",
+        "img": "/img/spodnie/4f.jpg",
+        "price": 79,
+        "selected": false
+      }
+    ]
+  }
+]

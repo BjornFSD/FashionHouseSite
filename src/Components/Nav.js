@@ -1,27 +1,20 @@
 import React from "react";
+import data from "../data.json";
 
-// const navItems = [
-//   "Koszulki",
-//   "Koszule",
-//   "Swetry",
-//   "Marynarki",
-//   "Kurtki",
-//   "Spodnie",
-//   "Bielizna",
-//   "Akcesoria",
-// ];
+//Przykładowe wyciąganie daty z pliku json jeśli nie potrzebuję dostać się przez serwer api
 
 function Nav() {
+  const dataItems = data.map((data) => {
+    return (
+      <li className="nav_li">
+        <a href={data.link}>{data.sectionPL}</a>
+      </li>
+    );
+  });
+
   return (
-    <div className="nav">
-      <button className="nav_btn">Koszulki</button>
-      <button className="nav_btn">Koszule</button>
-      <button className="nav_btn">Swetry</button>
-      <button className="nav_btn">Marynarki</button>
-      <button className="nav_btn">Kurtki</button>
-      <button className="nav_btn">Spodnie</button>
-      <button className="nav_btn">Bielizna</button>
-      <button className="nav_btn">Akcesoria</button>
+    <div>
+      <ul className="nav">{dataItems}</ul>
     </div>
   );
 }
