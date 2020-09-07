@@ -13,7 +13,7 @@ function Product({ match }) {
     );
     const { products } = sectionSpecificFilteredData;
     setProducts(products);
-  }, []);
+  }, [sectionName]);
 
   const ProductDetails = ({ product }) => {
     return (
