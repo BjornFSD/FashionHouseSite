@@ -13,31 +13,31 @@
         "description": "Czarny t-shirt punisher",
         "img": "/img/koszulki/punisher.png",
         "price": 69,
-        "selected": false
+        "id": 1
       },
       {
         "description": "Szary t-shirt",
         "img": "/img/koszulki/grey.jpg",
         "price": 59,
-        "selected": false
+        "id": 2
       },
       {
         "description": "Led Zeppelin t-shirt",
         "img": "/img/koszulki/ledzep.jpg",
         "price": 59,
-        "selected": false
+        "id": 3
       },
       {
         "description": "Biały t-shirt adidas",
         "img": "/img/koszulki/adidas.jpg",
         "price": 59,
-        "selected": false
+        "id": 4
       },
       {
         "description": "Moro t-shirt",
         "img": "/img/koszulki/moro.jpg",
         "price": 59,
-        "selected": false
+        "id": 5
       }
     ]
   },
@@ -50,25 +50,25 @@
         "description": "Koszula Army",
         "img": "/img/koszule/Army.jpg",
         "price": 79,
-        "selected": false
+        "id": 6
       },
       {
         "description": "Koszula Dark Blue",
         "img": "/img/koszule/DarkBlue.jpg",
         "price": 79,
-        "selected": false
+        "id": 7
       },
       {
         "description": "Koszula Jeans",
         "img": "/img/koszule/Jeans.jpg",
         "price": 79,
-        "selected": false
+        "id": 8
       },
       {
         "description": "Koszula Light Blue",
         "img": "/img/koszule/LightBlue.jpg",
         "price": 79,
-        "selected": false
+        "id": 9
       }
     ]
   },
@@ -82,7 +82,7 @@
         "description": "Szary sweter",
         "img": "/img/swetry/sweter.jpg",
         "price": 39,
-        "selected": false
+        "id": 10
       }
     ]
   },
@@ -95,7 +95,7 @@
         "description": "Marynarka szara",
         "img": "/img/marynarki/marynarka.jpg",
         "price": 79,
-        "selected": false
+        "id": 11
       }
     ]
   },
@@ -109,13 +109,13 @@
         "description": "Skórzana kurtka zapinana",
         "img": "/img/kurtki/skorzana.jpg",
         "price": 79,
-        "selected": false
+        "id": 12
       },
       {
         "description": "Zielona kurtka jesienna",
         "img": "/img/kurtki/zielona.jpg",
         "price": 79,
-        "selected": false
+        "id": 13
       }
     ]
   },
@@ -128,13 +128,13 @@
         "description": "Dresy szare 4F",
         "img": "/img/spodnie/4f.jpg",
         "price": 79,
-        "selected": false
+        "id": 14
       },
       {
         "description": "Spodnie białe",
         "img": "/img/spodnie/biale.jpg",
         "price": 79,
-        "selected": false
+        "id": 15
       }
     ]
   },
@@ -147,7 +147,7 @@
         "description": "Empty",
         "img": "/img/spodnie/4f.jpg",
         "price": 79,
-        "selected": false
+        "id": 16
       }
     ]
   },
@@ -160,7 +160,7 @@
         "description": "Empty",
         "img": "/img/spodnie/4f.jpg",
         "price": 79,
-        "selected": false
+        "id": 17
       }
     ]
   }

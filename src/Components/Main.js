@@ -1,12 +1,13 @@
 import React from "react";
 import data from "../data.json";
 import Trend from "./Trend.js";
+import { Link } from "react-router-dom";
 
 const dataItems = data.slice(1).map((data) => {
   return (
-    <a href={data.link} className="box_router">
-      <img src={`img/${data.sectionPL}T.png`} alt={data.sectionPL} />
-    </a>
+    <Link to={data.link} className="box_router">
+      <img src={`img/${data.sectionPL}.png`} alt={data.sectionPL} />
+    </Link>
   );
 });
 
