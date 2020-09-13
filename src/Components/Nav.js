@@ -2,14 +2,12 @@ import React from "react";
 import data from "../data.json";
 import { Link } from "react-router-dom";
 
-//Przykładowe wyciąganie daty z pliku json jeśli nie potrzebuję dostać się przez serwer api
-
 function Nav({ isActive, setIsActive }) {
   const dataItems = data.map((data) => {
     return (
       <li
         onClick={() => setIsActive(false)}
-        className="nav_li"
+        className={isActive ? "navi_li navi_li-active" : "navi_li"}
         key={data.section}
       >
         <Link to={data.link}>{data.sectionPL}</Link>
@@ -18,8 +16,14 @@ function Nav({ isActive, setIsActive }) {
   });
 
   return (
-    <div  className={isActive ? "nav_bar_container active" : "nav_bar_container"}>
-      <ul className="nav">{dataItems}</ul>
+    <div>
+      <button
+        className={isActive ? "burger burger_active" : "burger"}
+        onClick={() => setIsActive(!isActive)}
+      ></button>
+      <div className={isActive ? "bar bar_active" : "bar"}>
+        <ul className={isActive ? "navi navi_active" : "navi"}>{dataItems}</ul>
+      </div>
     </div>
   );
 }

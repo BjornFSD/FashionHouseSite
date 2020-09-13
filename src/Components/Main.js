@@ -1,6 +1,7 @@
 import React from "react";
 import data from "../data.json";
 import Trend from "./Trend.js";
+import Slider from "./Slider.js";
 import { Link } from "react-router-dom";
 
 const dataItems = data.slice(1).map((data) => {
@@ -14,6 +15,7 @@ const dataItems = data.slice(1).map((data) => {
 function Main() {
   return (
     <div>
+      <Slider />
       <Trend />
       <div className="box">{dataItems}</div>
     </div>

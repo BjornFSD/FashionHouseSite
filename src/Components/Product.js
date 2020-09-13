@@ -38,35 +38,44 @@ function Product(props) {
   };
   const ProductDetails = ({ product }) => {
     return (
-      <div className="product_items-box">
-        <img src={product.img} alt={product.description} />
-        <div className="product_items-box--details">
-          <p className="product_items-box--details-desc">
-            {product.description}
-          </p>
-          <p className="product_items-box--details-price">{product.price},-</p>
-          <Button
-            type="button"
-            variant="outlined"
-            onClick={(e) => {
-              e.preventDefault();
-              handleButton(product);
-            }}
-          >
-            add to cart
-          </Button>
+      <div className="c col-md-6 col-lg-4">
+        <img
+          className="a img-fluid mx-auto h-75 w-100"
+          src={product.img}
+          alt={product.description}
+        />
+        <div className="d-flex justify-content-between p-2">
+          <div className="d-flex flex-column">
+            <p>{product.description}</p>
+            <p>{product.price}$</p>
+          </div>
+          <div>
+            <Button
+              className="btn"
+              type="button"
+              variant="outlined"
+              onClick={(e) => {
+                e.preventDefault();
+                handleButton(product);
+              }}
+            >
+              add to cart
+            </Button>
+          </div>
         </div>
       </div>
     );
   };
 
   return (
-    <div className="product">
+    <div className="product row">
       {isLoading ? (
         <h1>Loading</h1>
       ) : (
         <div>
-          <h1 className="product_title">{props.match.params.id}</h1>
+          <div className="title_line">
+            <h1 className="product_title">{props.match.params.id}</h1>
+          </div>
           <div className="product_items">
             {products.length > 0 &&
               products.map((product, index) => (

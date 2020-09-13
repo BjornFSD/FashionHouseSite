@@ -1,4 +1,4 @@
-.nav {
+.navi {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -22,7 +22,83 @@
     text-decoration: none;
   }
   &_li:hover {
+    color: black;
     position: relative;
     top: -5px;
+  }
+}
+
+.burger {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 2rem;
+  background-color: black;
+  border: 2px solid white;
+  width: 30px;
+  height: 30px;
+  z-index: 10000;
+}
+.burger_active {
+  background-color: red;
+}
+
+.bar {
+  z-index: 9999;
+}
+.bar_active {
+  background-color: #0d2538;
+  width: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  animation: opacityIn 1s ease;
+  border: 1px solid white;
+}
+
+@keyframes opacityIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.navi_active {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  &_li-active {
+    background-color: #0d2538;
+
+    &_li-active:hover {
+      position: relative;
+      top: -5px;
+    }
+  }
+}
+
+@media (orientation: portrait) and (max-width: 992px) {
+  .navi {
+    display: none;
+    border-bottom: 0px;
+    &_li {
+      background-color: #0d2538;
+    }
+    &_li a {
+      color: white;
+    }
+    &_li:hover {
+      position: relative;
+      top: -5px;
+    }
+  }
+  .burger {
+    display: flex;
+  }
+  .navi_active {
+    display: flex;
   }
 }

@@ -9,6 +9,7 @@
 @import "./style/Trend.scss";
 @import "./style/product.scss";
 @import "./style/cart.scss";
+
 * {
   margin: 0 auto;
   clear: both;
@@ -16,4 +17,7 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   max-width: 1640px;
+}
+.app {
+  margin-left: 15px;
 }

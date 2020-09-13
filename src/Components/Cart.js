@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 
-
 function Cart({ cart, setCart }) {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -22,11 +21,9 @@ function Cart({ cart, setCart }) {
           <p className="cartItem_description">{product.description}</p>
           <div className="cartItem_bottom">
             <p className="cartItem_price">{`${product.count} x ${product.price} $`}</p>
-            <p
-              onClick={() => deleteItem(product)}
-              className="cartItem_button"
-              
-            >Delete</p>
+            <p onClick={() => deleteItem(product)} className="cartItem_button">
+              Delete
+            </p>
           </div>
         </div>
       </div>

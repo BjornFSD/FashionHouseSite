@@ -4,17 +4,20 @@
   box-shadow: 15vw 0 0 #000, -15vw 0 0 #000;
   font-family: "Montserrat";
   margin-top: 15px;
+
   &_box {
     display: flex;
     justify-content: space-between;
     height: 500px;
     padding-top: 4vh;
+
     &-kontakt {
-      margin-left: 10vw;
+      margin: 0 10vw;
     }
     &-newsletter {
       width: 260px;
-      margin-right: 10vw;
+      margin: 0 10vw;
+
       &--form {
         margin-top: 5vh;
         &-email {
@@ -50,6 +53,7 @@
   &_cr {
     margin-top: 2vh;
     text-align: center;
+    margin-bottom: 0;
   }
 }
 .underline {
@@ -58,5 +62,10 @@
   padding-bottom: 2vh;
   margin-bottom: 2vh;
 }
-span {
+
+@media (max-width: 540px) {
+  .footer_cr {
+    text-align: left;
+    margin: 0 10vw;
+  }
 }

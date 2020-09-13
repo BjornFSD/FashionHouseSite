@@ -7,6 +7,9 @@ import Footer from "./Components/Footer.js";
 import Product from "./Components/Product.js";
 import Cart from "./Components/Cart.js";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import "bootstrap/dist/css/bootstrap.css";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import { Link } from "react-router-dom";
 
 function App() {
   const [isActive, setIsActive] = useState(false);
@@ -15,30 +18,34 @@ function App() {
   return (
     <Router>
       <div className="app">
+        <Link to="/cart" className="header_cartIcon">
+          <ShoppingCartIcon fontSize="large" />
+        </Link>
         <Header isActive={isActive} setIsActive={setIsActive} />
-        <Route   render={({ location }) => (
-        <TransitionGroup>
-          <CSSTransition key={location.key} timeout={300} classNames="fade">
-        <Switch locatio={location}>
-          <Route path="/" exact component={Main} />
-          <Route
-            path="/product/:id"
-            exact
-            component={(props) => (
-              <Product {...props} setCart={setCart} cart={cart} />
-            )}
-          />
-          <Route
-            path="/cart"
-            exact
-            component={(props) => (
-              <Cart {...props} setCart={setCart} cart={cart} />
-            )}
-          />
-        </Switch>
-        </CSSTransition>
-        </TransitionGroup>
-        )}
+        <Route
+          render={({ location }) => (
+            <TransitionGroup>
+              <CSSTransition key={location.key} timeout={300} classNames="fade">
+                <Switch locatio={location}>
+                  <Route path="/" exact component={Main} />
+                  <Route
+                    path="/product/:id"
+                    exact
+                    component={(props) => (
+                      <Product {...props} setCart={setCart} cart={cart} />
+                    )}
+                  />
+                  <Route
+                    path="/cart"
+                    exact
+                    component={(props) => (
+                      <Cart {...props} setCart={setCart} cart={cart} />
+                    )}
+                  />
+                </Switch>
+              </CSSTransition>
+            </TransitionGroup>
+          )}
         />
         <Footer />
       </div>

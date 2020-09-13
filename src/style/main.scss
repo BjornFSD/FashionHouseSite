@@ -8,3 +8,11 @@
     margin-top: 40px;
   }
 }
+@media (orientation: portrait) and (max-width: 576px) {
+  .box {
+    margin: 0;
+  }
+  img {
+    width: 100%;
+  }
+}

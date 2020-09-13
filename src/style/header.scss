@@ -17,4 +17,25 @@
     justify-content: space-around;
     margin-top: 15px;
   }
+  &_cartIcon {
+    position: fixed;
+    top: 0.5em;
+    right: 2em;
+    z-index: 1000;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    &_bar {
+      display: none;
+      //visibility: hidden;
+    }
+    &_cartIcon {
+      position: fixed;
+      top: 1em;
+      right: 2em;
+      z-index: 10000;
+    }
+  }
 }

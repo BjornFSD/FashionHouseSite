@@ -1,8 +1,6 @@
 import React from "react";
-import Slider from "./Slider.js";
 import Nav from "./Nav.js";
 import logo from "../img/Logo.png";
-import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { Link } from "react-router-dom";
 
 // import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -20,16 +18,19 @@ function Header({ isActive, setIsActive }) {
         <div className="header_bar--right">
           <span>fashionhouse@xyz.com</span>
         </div>
-        <Link to="/cart" className="header_cartIcon">
-        <ShoppingCartIcon fontSize="large" />
-      </Link>
       </div>
       <div className="header_logo">
-        <img src={logo} alt="" />
+        <Link to="/">
+          {" "}
+          <img
+            className="img-fluid rounded mx-auto mt-5 d-block"
+            src={logo}
+            alt=""
+          />
+        </Link>
       </div>
-      <Nav isActive={isActive} setIsActive={setIsActive} />
 
-      <Slider />
+      <Nav isActive={isActive} setIsActive={setIsActive} />
     </div>
   );
 }

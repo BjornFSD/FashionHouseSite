@@ -4,15 +4,15 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer_line"></div>
-      <div className="footer_box">
-        <div className="footer_box-kontakt">
+      <div className="footer_box row">
+        <div className="footer_box-kontakt col-sm-12 col-md-10 col-lg-3 col-xl-2">
           <h2>Kontakt</h2>
           <div className="underline"></div>
           <span>Tel: 111 222 333</span>
           <br />
           <span>fashionhouse@xyz.com</span>
         </div>
-        <div className="footer_box-newsletter">
+        <div className="footer_box-newsletter col-sm-12 col-md-10 col-lg-3 col-lx-2">
           <h2>Newsletter</h2>
           <div className="underline"></div>
           <span>
