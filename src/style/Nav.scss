@@ -27,7 +27,14 @@
     top: -5px;
   }
 }
-
+.bgc_active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 110vw;
+  height: 110vh;
+  background-color: rgba(192, 192, 192, 0.8);
+}
 .burger {
   display: none;
   position: fixed;
@@ -36,8 +43,11 @@
   border-radius: 25%;
   z-index: 10000;
 }
+
 .burger_active {
-  background-color: red;
+  animation: burgerPos 2s ease;
+  left: 5rem;
+  color: white;
 }
 
 .bar {
@@ -46,23 +56,35 @@
 .bar_active {
   background-color: #0d2538;
   width: 300px;
-  top: 50%;
+  padding-top: 5rem;
+  top: -1%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   position: fixed;
-  animation: opacityIn 1s ease;
-  border: 1px solid white;
+  animation: opacityIn 2s ease;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
 }
 
 @keyframes opacityIn {
   from {
     opacity: 0;
+    top: -50%;
   }
   to {
     opacity: 1;
+    top: -1%;
   }
 }
-
+@keyframes burgerPos {
+  from {
+    left: 1rem;
+  }
+  to {
+    left: 5rem;
+  }
+}
 .navi_active {
   display: flex;
   flex-direction: column;

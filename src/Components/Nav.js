@@ -27,9 +27,12 @@ function Nav({ isActive, setIsActive }) {
         className={isActive ? "burger burger_active" : "burger"}
         onClick={() => setIsActive(!isActive)}
       />
-
-      <div className={isActive ? "bar bar_active" : "bar"}>
-        <ul className={isActive ? "navi navi_active" : "navi"}>{dataItems}</ul>
+      <div className={isActive ? "bgc_active" : ""}>
+        <div className={isActive ? "bar bar_active" : "bar"}>
+          <ul className={isActive ? "navi navi_active" : "navi"}>
+            {dataItems}
+          </ul>
+        </div>
       </div>
     </div>
   );
