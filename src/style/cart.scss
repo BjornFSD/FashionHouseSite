@@ -1,218 +1,166 @@
 .cart {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  width: 80%;
+  margin: 5vh auto 3vh;
+  &_empty {
+    text-align: center;
+    margin-top: 35px;
+  }
+  &_costAndButton {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    justify-content: space-around;
+    width: 75%;
+    height: 150px;
+  }
+  &_buyButton {
+    height: 40px;
+  }
+  &_totalCost {
+    color: #333;
+    margin-left: auto;
+    margin-right: 3vw;
+    font-weight: 600;
+    font-size: 23px;
+  }
+}
+
+.cartItem {
+  &_details {
+    position: relative;
+    width: 90%;
+  }
+  &_details::after {
+    position: absolute;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: rgb(204, 204, 204);
+    bottom: 0px;
+    left: 0px;
+  }
+  &_container {
+    margin-right: 170px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_image {
+    margin: 30px 0 0 120px;
+    width: 10%;
+    height: 150px;
+    text-align: left;
+  }
+  &_bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    min-height: 70vh;
-    width: 80%;
-    margin: 4vh auto 3vh;
-    &_empty {
-      text-align: center;
-      margin-top: 35px;
-    }
-    &_costAndButton {
-      display: flex;
-      justify-content: space-around;
-      width: 75%;
-      height: 150px;
-    }
-    &_buyButton {
-      height: 40px;
-    }
-    &_totalCost {
-      color: #333;
-      margin-left: auto;
-      margin-right: 3vw;
-      font-weight: 600;
-      font-size: 23px;
+    p {
+      margin: 0px 1px;
     }
   }
-  
+  &_description {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  &_price {
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  &_button {
+    color: #412d2df8;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  &_inner {
+    position: absolute;
+    text-align: center;
+    left: 25%;
+    right: 25%;
+    top: 25%;
+    bottom: 25%;
+    margin: auto;
+    border-radius: 20px;
+    background-image: url("/img/delivery3.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &_close {
+    position: absolute;
+    cursor: pointer;
+    right: 15px;
+    top: 10px;
+    font-weight: 600;
+    font-size: 40px;
+  }
+  &_inner--message {
+    margin: 40px;
+  }
+}
+
+@media (max-width: 767.8px) {
   .cartItem {
-    &_details {
-      position: relative;
-      width: 90%;
-      height: 20vh;
-    }
-    &_details::after {
-      position: absolute;
-      display: block;
-      content: "";
-      height: 2px;
-      width: 100%;
-      background-color: rgb(204, 204, 204);
-      bottom: 0px;
-      left: 0px;
-    }
     &_container {
-      margin-right: 170px;
-      display: flex;
-      justify-content: space-between;
+      height: 100%;
+      width: 100%;
     }
-  
     &_image {
-      margin: 30px 0 0 120px;
-      width: 10%;
-      height: 150px;
-      text-align: left;
+      margin: 0;
+      height: 100%;
     }
-    &_bottom {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-    &_description {
-      font-weight: 600;
-      font-size: 20px;
-    }
+
     &_price {
-      margin-right: 50px;
-      font-size: 20px;
-      font-weight: 600;
+      font-size: 16px;
     }
     &_button {
-      color: #412d2df8;
-      font-size: 30px;
-      cursor: pointer;
-    }
-  }
-  
-  .popup {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    &_inner {
-      position: absolute;
-      text-align: center;
-      left: 25%;
-      right: 25%;
-      top: 25%;
-      bottom: 25%;
-      margin: auto;
-      border-radius: 20px;
-      background-image: url("/img/delivery3.jpg");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    &_close {
-      position: absolute;
-      cursor: pointer;
-      right: 15px;
-      top: 10px;
-      font-weight: 600;
-      font-size: 40px;
-    }
-    &_inner--message {
-      margin: 40px;
-    }
-  }
-  
-  @media (max-width: 1100px) {
-    .cartItem {
-      &_container {
-        margin-right: 100px;
-      }
-      &_image {
-        margin-left: 50px;
-        width: 15%;
-        height: 100px;
-      }
-      &_description {
-        font-size: 18px;
-      }
-      &_price {
-        font-size: 18px;
-      }
-      &_button {
-        font-size: 25px;
-      }
-    }
-  }
-  
-  @media (orientation: portrait) and (max-width: 420px) {
-    .cartItem {
-      &_container {
-        margin: 10px 20px;
-      }
-      &_image {
-        margin-left: 0;
-        width: 20%;
-        height: 95px;
-      }
-      &_description {
-        margin-left: 15px;
-        width: 100%;
-        font-size: 15px;
-      }
-      &_price {
-        width: 50px;
-        margin-right: 15px;
-        font-size: 13px;
-      }
-      &_button {
-        font-size: 15px;
-      }
-    }
-  }
-  
-  @media (orientation: portrait) and (max-width: 360px) {
-    .cartItem {
-      &_image {
-        height: 67px;
-      }
-      &_description {
-        margin-left: 15px;
-        width: 100%;
-        font-size: 15px;
-      }
-      &_price {
-        width: 50px;
-        margin-right: 15px;
-        font-size: 13px;
-      }
-      &_button {
-        font-size: 15px;
-      }
-    }
-  }
-  
-  @media (orientation: landscape) and (max-width: 830px) {
-    .cartItem {
-      &_container {
-        height: 100%;
-        width: 100%;
-      }
-      &_image {
-        margin: 0;
-        height: 100%;
-      }
-  
-      &_price {
-        font-size: 16px;
-      }
-      &_button {
-        font-size: 15px;
-      }
-      &_details {
-        padding: 5px;
-      }
-    }
-    .popup_inner--message {
-      font-size: 20px;
-      margin: 25px;
-    }
-  }
-  @media (orientation: landscape) and (max-width: 640px) {
-    .popup_inner--message {
       font-size: 15px;
-      margin: 10px;
+    }
+    &_details {
+      padding: 5px;
     }
   }
+  .popup_inner--message {
+    font-size: 20px;
+    margin: 25px;
+  }
+}
+@media (max-width: 1199.8px) {
+  .cartItem {
+    &_container {
+      margin-right: 100px;
+    }
+    &_image {
+      margin-left: 50px;
+      width: 15%;
+      height: 100px;
+    }
+    &_description {
+      font-size: 18px;
+    }
+    &_price {
+      font-size: 18px;
+    }
+    &_button {
+      font-size: 25px;
+    }
+  }
+}

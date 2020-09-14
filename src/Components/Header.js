@@ -23,7 +23,7 @@ function Header({ isActive, setIsActive }) {
         <Link to="/">
           {" "}
           <img
-            className="img-fluid rounded mx-auto mt-5 d-block"
+            className="top img-fluid rounded mx-auto mt-5 d-block"
             src={logo}
             alt=""
           />

@@ -14,11 +14,13 @@ import { Link } from "react-router-dom";
 function App() {
   const [isActive, setIsActive] = useState(false);
   const [cart, setCart] = useState([]);
+  const countItems = cart.reduce((a, c) => a + c.count, 0);
 
   return (
     <Router>
       <div className="app">
         <Link to="/cart" className="header_cartIcon">
+          ({cart.length > 0 ? countItems : 0})
           <ShoppingCartIcon fontSize="large" />
         </Link>
         <Header isActive={isActive} setIsActive={setIsActive} />

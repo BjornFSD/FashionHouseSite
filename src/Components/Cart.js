@@ -8,29 +8,38 @@ function Cart({ cart, setCart }) {
     const cartItems = cart.slice();
     setCart(cartItems.filter((item) => item.id !== product.id));
   };
-
-  const ProductDetails = ({ product }) => {
-    return (
-      <div className="cartItem_details">
-        <div className="cartItem_container">
-          <img
-            className="cartItem_image"
-            src={product.img}
-            alt={product.description}
-          />
-          <p className="cartItem_description">{product.description}</p>
-          <div className="cartItem_bottom">
-            <p className="cartItem_price">{`${product.count} x ${product.price} $`}</p>
-            <p onClick={() => deleteItem(product)} className="cartItem_button">
-              Delete
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  };
   const totalCost = cart.reduce((a, c) => a + c.price * c.count, 0);
 
+  const addCount = (product) => {
+    const cartItems = cart.slice();
+    let alreadyInCart = false;
+    cartItems.forEach((item) => {
+      if (item.id === product.id) {
+        item.count++;
+        alreadyInCart = true;
+      }
+    });
+    if (!alreadyInCart) {
+      cartItems.push({ ...product, count: 1 });
+    }
+    setCart(cartItems);
+    //  console.log(cartItems);
+  };
+  const minusCount = (product) => {
+    const cartItems = cart.slice();
+
+    cartItems.forEach((item) => {
+      if (item.id === product.id) {
+        if (item.count === 1) {
+          return;
+        } else {
+          item.count--;
+        }
+      }
+    });
+    setCart(cartItems);
+    //  console.log(cartItems);
+  };
   const handleBuy = () => {
     setShowPopup(true);
   };
@@ -38,6 +47,33 @@ function Cart({ cart, setCart }) {
   const closePopup = () => {
     setShowPopup(false);
     setCart([]);
+  };
+
+  const ProductDetails = ({ product }) => {
+    return (
+      <div className="cartItem_details">
+        <div className="row">
+          <img
+            className="img-fluid w-50 col-md-2"
+            src={product.img}
+            alt={product.description}
+          />
+          <p className="cartItem_description col-md-6">{product.description}</p>
+          <div className="cartItem_bottom col-md-4">
+            <p className="cartItem_price">{`${product.count} x ${product.price} $`}</p>
+            <p onClick={() => addCount(product)} className="cartItem_button">
+              +
+            </p>
+            <p onClick={() => minusCount(product)} className="cartItem_button">
+              -
+            </p>
+            <p onClick={() => deleteItem(product)} className="cartItem_button">
+              Delete
+            </p>
+          </div>
+        </div>
+      </div>
+    );
   };
 
   return (

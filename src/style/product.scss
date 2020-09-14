@@ -41,18 +41,8 @@ p {
   position: relative;
   top: 1px;
 }
-@media (max-width: 1720px) {
-  .product {
-    &_items {
-      &-box {
-        width: 26vw;
-        flex-flow: row wrap;
-      }
-    }
-  }
-}
 
-@media (max-width: 1023px) {
+@media (max-width: 767.8px) {
   .product {
     .title_line {
       border-top: 1px solid black;

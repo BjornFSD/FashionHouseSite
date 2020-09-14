@@ -35,10 +35,11 @@ function Product(props) {
     }
     props.setCart(cartItems);
     console.log(cartItems);
+    //  console.log(cartItems[0].count);
   };
   const ProductDetails = ({ product }) => {
     return (
-      <div className="c col-md-6 col-lg-4">
+      <div className="c col-md-6 col-lg-6 col-xl-4">
         <img
           className="a img-fluid mx-auto h-75 w-100"
           src={product.img}
