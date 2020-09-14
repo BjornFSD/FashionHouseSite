@@ -1,9 +1,11 @@
 .footer {
   background-color: black;
+
   color: white;
   box-shadow: 15vw 0 0 #000, -15vw 0 0 #000;
   font-family: "Montserrat";
   margin-top: 15px;
+  z-index: 0;
 
   &_box {
     display: flex;
@@ -12,9 +14,11 @@
     padding-top: 4vh;
 
     &-kontakt {
+      position: unset !important;
       margin: 0 10vw;
     }
     &-newsletter {
+      position: unset !important;
       width: 260px;
       margin: 0 10vw;
 
